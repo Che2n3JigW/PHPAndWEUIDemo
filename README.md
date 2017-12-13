@@ -1,1 +1,5 @@
 # PHPAndWEUIDemo
+首先将该项目放入xampp的htdocs文件目录下
+将stu.sql导入数据库
+进入首页
+若无信息显示请进入.php文件中修改相关的数据库接入信息
