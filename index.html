@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <link rel="stylesheet" href="assets/css/weui.css"/>
+  <link rel="stylesheet" href="assets/css/weui2.css"/>
+  <link rel="stylesheet" href="assets/css/weui3.css"/>
+  <style type="text/css">
+  
+  .touch{ touch-action: none; }
+  
+  </style>
+      <script src="assets/js/zepto.min.js"></script>
+      <script src="assets/js/iscroll.js"></script>
+	  <script src="assets/js/swipe.js"></script>
+      <script>
+  $(function(){
+    TagNav('#tagnav',{
+        type: 'scrollToFirst',
+    });
+	  $('.weui_tab').tab({
+    defaultIndex: 0,
+    activeClass:'weui_bar_item_on'
+});
+	  
+	  
+	  
+	   $('.searchbar_wrap').searchBar({
+    cancelText:"取消",
+    searchText:'关键字',
+    onfocus: function (value) {
+       
+    },
+    onblur:function(value) {
+
+    },
+    oninput: function(value) {
+
+    },
+    onsubmit:function(value){
+    },
+    oncancel:function(){
+
+    },
+
+    onclear:function(){
+
+    }
+});
+	  
+	  
+$('#slide2').swipeSlide({
+autoSwipe:true,//自动切换默认是
+speed:3000,//速度默认4000
+continuousScroll:true,//默认否
+transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+lazyLoad:true,//懒加载默认否
+firstCallback : function(i,sum,me){
+            me.find('.dot').children().first().addClass('cur');
+        },
+        callback : function(i,sum,me){
+            me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+        }
+});	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  });    
+      
+      </script>
+</head>
+
+<body ontouchstart style="background-color: #f8f8f8;">
+<div class="page-hd" style="position:relative;z-index:9999;background-color:white">
+        <h1 class="">
+            底部导航
+        </h1>
+        <p class="">为了防止底部文字被挡住,需添加空行在导航上面,横向无限滚动需要加载iscroll.js</p>
+</div>
+<div id="tagnav" class="weui-navigator weui-navigator-wrapper touch">
+           <ul class="weui-navigator-list">
+                <li style="background-color:red"><a href="javascript:;">首页</a></li>
+                <li><a href="javascript:;">我爱中国</a></li>
+                <li><a href="javascript:;">国内</a></li>
+                <li><a href="javascript:;">国际</a></li>
+                <li><a href="javascript:;">军事</a></li>
+                <li><a href="javascript:;">社会</a></li>
+                <li><a href="javascript:;">娱乐</a></li>
+                <li><a href="javascript:;">女人</a></li>
+                <li><a href="javascript:;">体育</a></li>
+                <li><a href="javascript:;">科技</a></li>
+                <li><a href="javascript:;">互联网</a></li>
+                <li><a href="javascript:;">教育</a></li>
+                <li><a href="javascript:;">财经</a></li>
+                <li><a href="javascript:;">房产</a></li>
+                <li><a href="javascript:;">汽车</a></li>
+            </ul>
+    </div>    
+     <div class="searchbar_wrap">
+</div>
+ <div class="weui_cells_title" style="height:45px;">&nbsp;</div>    
+<div class="weui_tab tab-bottom" > <!-- 此容器在最外层 -->
+                <div class="weui_tab_bd">
+        <div class="weui_tab_bd_item" style="margin-top:260px">
+
+		<div class="slide touch" id="slide2">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="" data-src="http://7xr193.com1.z0.glb.clouddn.com/1.jpg" alt="">
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a href="#">
+                <img src="" alt="">
+            </a>
+            
+        </li>
+    </ul>
+    <div class="dot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<div class="weui_panel weui_panel_access">
+            <div class="weui_panel_hd">图文组合列表</div>
+            <div class="weui_panel_bd">
+                <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题一</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题二</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+				 <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题二</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+				 <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题二</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+				 <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题二</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+				 <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                    <div class="weui_media_hd">
+                        <img class="weui_media_appmsg_thumb" src="" alt="">
+                    </div>
+                    <div class="weui_media_bd">
+                        <h4 class="weui_media_title">标题二</h4>
+                        <p class="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                    </div>
+                </a>
+            </div>
+            <a class="weui_panel_ft" href="javascript:void(0);">查看更多</a>
+        </div> 
+		
+		
+        </div>
+        <div class="weui_tab_bd_item">
+            <h3>通讯录</h3>
+        </div>
+        <div class="weui_tab_bd_item">
+            <h3>发现</h3>
+        </div>
+        <div class="weui_tab_bd_item">
+            <h3>我</h3>
+        </div>
+              <div class="weui_tab_bd_item">
+            <h3>设置</h3>
+        </div>
+    </div>
+            <div class="weui_tabbar ">
+                <a href="javascript:;" class="weui_tabbar_item weui_bar_item_on">
+                    <div class="weui_tabbar_icon">
+                        <img src="assets/images/icon_nav_button.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">微信</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="assets/images/icon_nav_msg.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">通讯录</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="assets/images/icon_nav_article.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">发现</p>
+                </a>
+                <a href="my.html" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="assets/images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">我</p>
+                </a>
+                  <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="assets/images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">设置</p>
+                </a>              
+            </div>
+        </div>
+</body>
+</html>
